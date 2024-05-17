@@ -24,7 +24,7 @@ def create_frame(
     return np.array(img)
 
 
-def generate_scrolling_text_video(text: str, output_file: str) -> None:
+def generate_video_script(text: str, output_file: str) -> None:
     """Генерирует MP4 видео с прокручивающимся текстом."""
     # Размеры видео
     video_width, video_height = 100, 100
@@ -52,11 +52,4 @@ def generate_scrolling_text_video(text: str, output_file: str) -> None:
     # Устанавливаем количество кадров в секунду
     video_clip = video_clip.set_fps(fps)
 
-    # Записываем видео в файл
     video_clip.write_videofile(output_file, codec='libx264')
-
-
-if __name__ == "__main__":
-    text = "От топота копыт, пыль по полю летит!"
-    output_file = "scrolling_text.mp4"
-    generate_scrolling_text_video(text, output_file)
