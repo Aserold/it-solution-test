@@ -3,3 +3,4 @@ __pycache__/
 media/videos/*
 !media/videos/
 database.sqlite3
+.env
